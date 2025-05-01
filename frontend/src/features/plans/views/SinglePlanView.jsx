@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import planApi from "../api/planApi";
 
+// This component displays a single learning plan's details
+// It fetches the plan data from the API using the planId from the URL parameters
 const SinglePlanView = () => {
   const currentUserId = localStorage.getItem("userId");
   const { planId } = useParams();
