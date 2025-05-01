@@ -14,6 +14,7 @@ const PlansPage = () => {
     }
   };
 
+  // Fetch plans when the component mounts
   useEffect(() => {
     fetchPlans();
   }, []);
