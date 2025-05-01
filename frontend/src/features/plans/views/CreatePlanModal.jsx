@@ -54,7 +54,7 @@ const CreatePlanModal = () => {
     "Other"
   ];
 
-  // Validation patterns
+  // Validation patterns 
   const validationPatterns = {
     title: /^.{5,100}$/,
     description: /^.{10,500}$/,
