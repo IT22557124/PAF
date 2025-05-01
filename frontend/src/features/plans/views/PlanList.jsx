@@ -47,7 +47,7 @@ const PlanList = ({ plans }) => {
                 ))}
               </div>
 
-              {/* Owner Info */}
+              {/* Owner Info  */}
             
               <div className="mt-4 flex items-center">
                 <img
