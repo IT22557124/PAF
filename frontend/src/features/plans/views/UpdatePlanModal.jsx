@@ -33,7 +33,8 @@ const UpdatePlanModal = () => {
   // Form state
   const [formData, setFormData] = useState(initialFormState);
   
-  // Form validation errors
+  // Form validation errors state
+  // This state will hold any validation errors for the form fields
   const [errors, setErrors] = useState({});
   
   // Loading states
