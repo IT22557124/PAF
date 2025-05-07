@@ -103,19 +103,6 @@ export default {
     }
   },
 
-  // Complete a learning unit in a learning plan
-  async completeLearningUnit(planId, unitId) {
-    try {
-      const response = await apiClient.post(`/learning-plans/${planId}/complete-unit/${unitId}`);
-      return response.data;
-    } catch (error) {
-      let errorMessage = "Failed to mark learning unit as completed";
-      if (error.response) {
-        errorMessage = error.response.data.message || errorMessage;
-      }
-      throw new Error(errorMessage);
-    }
-  },
 
   // Fork a learning plan
   async forkLearningPlan(planId, userId) {
