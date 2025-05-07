@@ -49,7 +49,17 @@ const PlanList = ({ plans }) => {
 
               {/* Owner Info  */}
             
-              
+              <div className="mt-4 flex items-center">
+                <img
+                  src={plan.owner.profileImageUrl || "https://via.placeholder.com/40"}
+                  alt={plan.owner.username}
+                  className="w-10 h-10 rounded-full object-cover mr-2"
+                />
+                <div>
+                  <p className="font-medium">{plan.owner.firstName} {plan.owner.lastName}</p>
+                  <p className="text-xs text-gray-500">@{plan.owner.username}</p>
+                </div>
+              </div>
               
             </div>
 
