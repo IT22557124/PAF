@@ -60,20 +60,7 @@ export default {
   },
 
   // Search learning plans
-  async searchLearningPlans(query, category, skillLevel, page = 0, size = 10) {
-    try {
-      const response = await apiClient.get("/learning-plans/search", {
-        params: { query, category, skillLevel, page, size },
-      });
-      return response.data;
-    } catch (error) {
-      let errorMessage = "Failed to search learning plans";
-      if (error.response) {
-        errorMessage = error.response.data.message || errorMessage;
-      }
-      throw new Error(errorMessage);
-    }
-  },
+
 
   // Update a learning plan
   async updateLearningPlan(planId, updatedData) {
