@@ -113,4 +113,22 @@ export default {
       throw new Error(errorMessage);
     }
   }
+
+
+  // Get like count for a user
+  // async getLikeCountForUser(userId) {
+
+    // Get like count for a post
+    async getLikeCountForPost(postId) {
+      try {
+        const response = await apiClient.get(`/likes/count/${postId}`);
+        return response.data.count;
+      } catch (error) {
+        let errorMessage = "Failed to fetch like count";
+        if (error.response) {
+          errorMessage = error.response.data.message || errorMessage;
+        }
+        throw new Error(errorMessage);
+      }
+    }
 };
